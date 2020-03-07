@@ -1,0 +1,20 @@
+# Maintainer: Eric Gebhart <e.a.gebhart@protonmail.com>
+pkgname=X11
+pkgver=1
+pkgrel=1
+pkgdesc="X stuff I always need beyond xorg and xorg-apps"
+arch=(any)
+url="https://github.com/ericgebhart/arch-pkgs"
+license=(MIT)
+groups=(eagebhart)
+
+# X11
+# xorg and xorg-apps +
+depends=(xf86-input-libinput xterm rxvt-unicode termite feh
+xscreensaver xcompmgr polkit polkit-gnome polkit-qt5)
+
+# audio
+depends+=(pulseaudio pulseaudio-alsa pulseaudio-bluetooth)
+
+rootdir=$PWD
+

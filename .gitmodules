@@ -1,0 +1,3 @@
+[submodule "yay"]
+	path = yay
+	url = http://github.com/jguer/yay

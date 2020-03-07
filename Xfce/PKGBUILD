@@ -1,0 +1,20 @@
+# Maintainer: Eric Gebhart <e.a.gebhart@protonmail.com>
+pkgname=xfce
+pkgver=1
+pkgrel=1
+pkgdesc="Xfce stuff"
+arch=(any)
+url="https://github.com/ericgebhart/arch-pkgs"
+license=(MIT)
+groups=(eagebhart)
+
+# Xfce
+# xfce4 and xfce4 plugins etc.
+depends=(xfce4 xfce4-goodies network-manager-applet
+xscreensaver xcompmgr polkit polkit-gnome polkit-qt5)
+
+# audio
+depends+=(pulseaudio pulseaudio-alsa pulseaudio-bluetooth)
+
+rootdir=$PWD
+

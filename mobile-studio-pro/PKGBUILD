@@ -1,0 +1,29 @@
+# Maintainer: Eric Gebhart <e.a.gebhart@protonmail.com>
+pkgname=mobile-studio-pro
+pkgver=1
+pkgrel=1
+pkgdesc="Some setup for a mobile studio pro"
+arch=(any)
+url="https://github.com/ericgebhart/arch-pkgs"
+license=(MIT)
+groups=(eagebhart)
+
+depends=(nvidia)
+
+### High DPI, get this stuff into .Xresources....
+# .Xresources
+# Xft.dpi:       286 or 192 for smaller everything.
+
+# this is for 3840x2560 resolution
+# !Fonts {{{
+# Xft.antialias: true
+# Xft.hinting:   true
+# Xft.rgba:      rgb
+# Xft.hintstyle: hintfull
+# Xft.dpi:       286
+# ! }}}
+
+# Xcursor.size: 64
+
+
+rootdir=$PWD

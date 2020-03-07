@@ -1,0 +1,18 @@
+# Maintainer: Eric Gebhart <e.a.gebhart@protonmail.com>
+pkgname=Xmonad-setup
+pkgver=32
+pkgrel=1
+pkgdesc="Everything needed by my Xmonad Setup"
+arch=(any)
+url="https://github.com/ericgebhart/arch-pkgs"
+license=(MIT)
+groups=(eagebhart)
+
+### XMonad with accessories and haskell.
+### My Xmonad-setup repo
+### xmonad-log-applet -- my repo
+depends=(
+    xmonad xmonad-contrib ghc dbus haskell-dbus
+    dmenu dzen2 network-manager-applet xfce4-panel)
+
+rootdir=$PWD

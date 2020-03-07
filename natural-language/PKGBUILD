@@ -1,0 +1,14 @@
+# Maintainer: Eric Gebhart <e.a.gebhart@protonmail.com>
+pkgname=natural-language
+pkgver=1
+pkgrel=1
+pkgdesc="apps, tools and dictionaries for natural languages"
+arch=(any)
+url="https://github.com/ericgebhart/arch-pkgs"
+license=(MIT)
+groups=(eagebhart)
+
+##### languages
+depends=(anki languagetool hunspell hunspell-fr hunspell-en_US hunspell-es_any )
+
+rootdir=$PWD

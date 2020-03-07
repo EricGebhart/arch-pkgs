@@ -1,0 +1,38 @@
+# Maintainer: Eric Gebhart <e.a.gebhart@protonmail.com>
+pkgname=necessities
+pkgver=32
+pkgrel=1
+pkgdesc="Basic necessities to install before rebooting a new install"
+arch=(any)
+url="https://github.com/ericgebhart/arch-pkgs"
+license=(MIT)
+groups=(eagebhart)
+
+provides=(vim)
+conflicts=(vim)
+replaces=(vim)
+
+# Necessities group
+depends=(sudo git networkmanager tree efibootmgr efivar)
+
+# editors
+depends+=(vi neovim nano emacs)
+
+# Extra general packages - nice to have.
+depends+=(bc htop curl wget openssh zip unzip gzip the_silver_searcher)
+
+# fonts, Might as well have some.
+depends+=(ttf-ubuntu-font-family adobe-source-code-pro-fonts)
+
+# Debugging tools ok. why not.
+depends+=(
+    lsof bind-tools mtr socat htop iotop openbsd-netcat strace tcpdump whois
+    iftop dstat)
+
+# Shells - Need zsh to create my user account.
+depends+=(zsh zsh-completions fish)
+
+# Filesystems - probably no need, but ok.
+depends+=(exfat-utils dosfstools f2fs-tools)
+
+rootdir=$PWD

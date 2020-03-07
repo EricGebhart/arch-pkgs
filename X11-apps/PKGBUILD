@@ -1,0 +1,14 @@
+# Maintainer: Eric Gebhart <e.a.gebhart@protonmail.com>
+pkgname=X11-apps
+pkgver=1
+pkgrel=1
+pkgdesc="X11-apps I always want"
+arch=(any)
+url="https://github.com/ericgebhart/arch-pkgs"
+license=(MIT)
+groups=(eagebhart)
+
+#### Basic Apps.
+depends=(libreoffice-fresh dolphin network-manager-applet yacreader vivaldi vivaldi-codecs-ffmpeg-extra-bin audacity)
+
+rootdir=$PWD

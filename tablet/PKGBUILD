@@ -1,0 +1,19 @@
+# Maintainer: Eric Gebhart <e.a.gebhart@protonmail.com>
+pkgname=tablet
+pkgver=32
+pkgrel=1
+pkgdesc="Apps and settings for a tablet"
+arch=(any)
+url="https://github.com/ericgebhart/arch-pkgs"
+license=(MIT)
+groups=(eagebhart)
+
+install=tablet.install
+
+### tablet apps
+### xev wacom express keys and pen mapping, easystroke gestures...
+### cellwriter-at-point script and other stuff at: https://wiki.archlinux.org/index.php/Tablet_PC
+
+depends+=(krita gimp cellwriter xf86-input-wacom easystroke onboard inkscape blender xournalpp)
+
+rootdir=$PWD
