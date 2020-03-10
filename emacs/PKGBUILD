@@ -10,6 +10,6 @@ groups=(eagebhart)
 
 ### Emacs
 ### My emacs config, mbsync/isync config, notmuch, etc.
-depends=(emacs isync notmuch languagetool hunspell mu-git)
+depends=(emacs isync notmuch languagetool hunspell)
 
 rootdir=$PWD
