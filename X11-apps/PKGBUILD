@@ -9,6 +9,6 @@ license=(MIT)
 groups=(eagebhart)
 
 #### Basic Apps.
-depends=(libreoffice-fresh dolphin network-manager-applet yacreader vivaldi vivaldi-codecs-ffmpeg-extra-bin audacity)
+depends=(libreoffice-fresh dolphin network-manager-applet audacity)
 
 rootdir=$PWD
