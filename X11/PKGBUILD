@@ -13,8 +13,12 @@ groups=(eagebhart)
 depends=(xf86-input-libinput xterm rxvt-unicode termite feh
 xscreensaver xcompmgr polkit polkit-gnome polkit-qt5)
 
+depends+=(adwaita-icon-theme xcursor-themes xcursor-comix 
+xcursor-premium xcursor-bluecurve xcursor-neutral)
+
 # audio
 depends+=(pulseaudio pulseaudio-alsa pulseaudio-bluetooth)
+
 
 rootdir=$PWD
 
