@@ -1,4 +1,4 @@
-packages := $(shell find . -type d)
+packages := $(shell ls -d */ | sed 's,/,,')
 
 all: $(packages)
 
