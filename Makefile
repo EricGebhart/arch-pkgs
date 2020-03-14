@@ -6,6 +6,7 @@ print-%  : ; @echo $* = $($*)
 
 clean:
 	rm -f */*.xv
+	rm -f */*.xz
 	rm -rf */src
 	rm -rf */pkg
 
