@@ -5,14 +5,14 @@ all: $(packages)
 print-%  : ; @echo $* = $($*)
 
 clean:
-	rm */*.xv
+	rm -f */*.xv
 	rm -rf */src
 	rm -rf */pkg
 
 .PHONY: $(packages)
 
 $(packages):
-	cd $@; makepkg -si; cd -
+	cd $@; makepkg -si --noconfirm; cd -
 
 necessities:
 dotfiles:
