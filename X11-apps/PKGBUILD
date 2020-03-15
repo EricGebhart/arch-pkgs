@@ -9,7 +9,9 @@ license=(MIT)
 groups=(eagebhart)
 
 #### Basic Apps.
-depends=(libreoffice-fresh dolphin network-manager-applet audacity 
+depends=(libreoffice-fresh dolphin network-manager-applet audacity
 lxappearance)
+
+depends+=(xscreensaver xcompmgr polkit polkit-gnome polkit-qt5)
 
 rootdir=$PWD
