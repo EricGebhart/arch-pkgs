@@ -25,11 +25,9 @@ more complete.
 
 # See Also:
 
-- **Part 1:** [Hosting an Arch Linux Repository in an Amazon S3 Bucket]
-- **Part 2:** [Managing Arch Linux with Meta Packages]
-- **Part 3:** [Creating a Custom Arch Linux Installer]
+[Arch Linux; Creating an automated install and personal Setup](http://ericgebhart.com/blog/code/2020-03-15-Arch-Linux/)
 
-[hosting an arch linux repository in an amazon s3 bucket]: https://disconnected.systems/blog/archlinux-repo-in-aws-bucket
-[managing arch linux with meta packages]: https://disconnected.systems/blog/archlinux-meta-packages
-[creating a custom arch linux installer]: https://disconnected.systems/blog/archlinux-installer
+* [hosting an arch linux repository in an amazon s3 bucket]: https://disconnected.systems/blog/archlinux-repo-in-aws-bucket
+* [managing arch linux with meta packages]: https://disconnected.systems/blog/archlinux-meta-packages
+* [creating a custom arch linux installer]: https://disconnected.systems/blog/archlinux-installer
 
