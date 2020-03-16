@@ -1,5 +1,10 @@
 packages := $(shell ls -d */ | sed 's,/,,')
-aur-packages := yacreader vivaldi vivaldi-codecs-ffmpeg-extra-bin mu-git jekyll babashka-bin slack-desktop
+
+# AUR packages
+X11-apps-aur := yacreader vivaldi vivaldi-codecs-ffmpeg-extra-bin \
+	slack-desktop
+devel-aur := jekyll babashka-bin
+aur-packages :=  $(X11-apps-aur) mu-git $(devel-aur)
 
 # groups cannot be installed via dependencies in PKGBUILD
 groups := xorg xorg-apps xorg-fonts alsa xfce4 xfce-goodies
@@ -31,10 +36,10 @@ $(groups):
 necessities: yay
 emacs: necessities natural-language mu-git
 X11: xorg xorg-apps xorg-fonts X11-apps
-X11-apps: yay audio yacreader vivaldi vivaldi-codecs-ffmpeg-extra-bin slack-desktop
+X11-apps: yay audio $(X11-apps-aur)
 Xfce: xfce4 xfce-goodies
 audio: alsa
-devel: yay jekyll babashka-bin
+devel: yay $(devel-aur)
 yay:
 Xmonad:
 natural-language:
