@@ -25,9 +25,8 @@ depends+=(bc htop curl wget openssh zip unzip gzip the_silver_searcher)
 depends+=(ttf-ubuntu-font-family adobe-source-code-pro-fonts)
 
 # Debugging tools ok. why not.
-depends+=(
-    lsof bind-tools mtr socat htop iotop openbsd-netcat strace tcpdump whois
-    iftop dstat)
+depends+=(lsof bind-tools mtr socat htop iotop openbsd-netcat) 
+depends+=(strace tcpdump whois iftop dstat)
 
 # Shells - Need zsh to create my user account.
 depends+=(zsh zsh-completions fish)

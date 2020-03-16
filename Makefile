@@ -19,13 +19,13 @@ clean:
 .PHONY: $(everything)
 
 $(packages):
-	cd $@; makepkg -si --noconfirm
+	cd $@; makepkg -si --noconfirm --needed
 
 $(aur-packages):
-	yay -S --noconfirm $@
+	yay -S --noconfirm --needed $@
 
 $(groups):
-	sudo pacman -S --noconfirm $@
+	sudo pacman -S --noconfirm --needed $@
 
 # not necessary to list them, but it's clearer.
 necessities: yay
