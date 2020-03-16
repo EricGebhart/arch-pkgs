@@ -1,10 +1,12 @@
-packages := $(shell ls -d */ | sed 's,/,,')
+packages := $(shell ls -d */ | sed 's,/,,' | sed 's/yay//')
 aur-packages := yacreader vivaldi vivaldi-codecs-ffmpeg-extra-bin mu-git jekyll babashka-bin
 
 # groups cannot be installed via dependencies in PKGBUILD
 groups := xorg xorg-apps xorg-fonts alsa xfce4 xfce-goodies
 
-all: $(packages) $(groups)
+everything := $(packages) $(groups) $(aur-packages)
+
+all: $(everything)
 
 print-%  : ; @echo $* = $($*)
 
@@ -14,10 +16,10 @@ clean:
 	rm -rf */src
 	rm -rf */pkg
 
-.PHONY: $(packages) $(groups)
+.PHONY: $(everything)
 
 $(packages):
-	cd $@; makepkg -si --noconfirm; cd -
+	cd $@; makepkg -si --noconfirm
 
 $(aur-packages):
 	yay -S --noconfirm $@
@@ -25,6 +27,9 @@ $(aur-packages):
 $(groups):
 	sudo pacman -S --noconfirm $@
 
+### this needs some work. But it's close.
+/usr/bin/yay:
+	cd $@; makepkg -si --noconfirm
 
 # not necessary to list them, but it's clearer.
 necessities: yay
@@ -34,7 +39,7 @@ X11-apps: audio yacreader vivaldi vivaldi-codecs-ffmpeg-extra-bin
 Xfce: xfce4 xfce-goodies
 audio: alsa
 devel: jekyll babashka-bin
-yay:
+yay: /usr/bin/yay
 Xmonad:
 natural-language:
 mobile-studio-pro:
