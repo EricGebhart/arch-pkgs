@@ -1,0 +1,15 @@
+# Maintainer: Eric Gebhart <e.a.gebhart@protonmail.com>
+pkgname=emacs
+pkgver=1
+pkgrel=1
+pkgdesc="emacs stuff"
+arch=(any)
+url="https://github.com/ericgebhart/arch-pkgs"
+license=(MIT)
+groups=(eagebhart)
+
+# audio
+# alsa - is a group. See Makefile.
+depends=(emacs isync)
+
+rootdir=$PWD
