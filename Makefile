@@ -1,4 +1,5 @@
 packages := $(shell ls -d */ | sed 's,/,,')
+aur-packages := yacreader vivaldi vivaldi-codecs-ffmpeg-extra-bin mu-git jekyll babashka-bin
 
 # groups cannot be installed via dependencies in PKGBUILD
 groups := xorg xorg-apps xorg-fonts alsa xfce4 xfce-goodies
@@ -18,23 +19,25 @@ clean:
 $(packages):
 	cd $@; makepkg -si --noconfirm; cd -
 
+$(aur-packages):
+	yay -S --noconfirm $@
+
 $(groups):
 	sudo pacman -S --noconfirm $@
 
 
 # not necessary to list them, but it's clearer.
-necessities:
-dotfiles:
-emacs:
-yay:
+necessities: yay
+emacs: necessities natural-language mu-git
 X11: xorg xorg-apps xorg-fonts X11-apps
-X11-apps: audio
+X11-apps: audio yacreader vivaldi vivaldi-codecs-ffmpeg-extra-bin
 Xfce: xfce4 xfce-goodies
 audio: alsa
+devel: jekyll babashka-bin
+yay:
 Xmonad:
-devel:
 natural-language:
 mobile-studio-pro:
 tablet:
 
-base: X11 X11-apps audio necessities dotfiles Xmonad yay
+base: necessities X11 audio Xmonad
