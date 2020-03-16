@@ -44,5 +44,4 @@ tablet:
 base: necessities X11 audio Xmonad
 
 git-sub-update:
-	git submodule update --recursive --remote \
-	git commit -am "update submodules to head"
+	git submodule update --recursive --remote
