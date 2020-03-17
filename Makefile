@@ -4,7 +4,8 @@ packages := $(shell ls -d */ | sed 's,/,,')
 X11-apps-aur := yacreader vivaldi vivaldi-codecs-ffmpeg-extra-bin \
 	slack-desktop
 devel-aur := jekyll babashka-bin
-aur-packages :=  $(X11-apps-aur) mu-git $(devel-aur)
+Anbox := anbox-image-gapps anbox-modules-dkms-git anbox-bridge
+aur-packages :=  $(X11-apps-aur) mu-git $(devel-aur) $(Anbox)
 
 # groups cannot be installed via dependencies in PKGBUILD
 groups := xorg xorg-apps xorg-fonts alsa xfce4 xfce-goodies
@@ -45,6 +46,7 @@ Xmonad:
 natural-language:
 mobile-studio-pro:
 tablet:
+anbox: $(Anbox)
 
 base: necessities X11 audio Xmonad
 

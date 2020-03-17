@@ -1,14 +1,14 @@
 # Maintainer: Eric Gebhart <e.a.gebhart@protonmail.com>
-pkgname=devel
+pkgname=anbox
 pkgver=1
 pkgrel=1
-pkgdesc="Stuff for all the programming languages I use."
+pkgdesc="Stuff for running android in a box."
 arch=(any)
 url="https://github.com/ericgebhart/arch-pkgs"
 license=(MIT)
 groups=(eagebhart)
 
 #### code
-depends+=(linux-headers leiningen clojure jdk-openjdk perl python ctags openscad ruby ruby-bundler lua)
+depends+=(linux-headers android-tools)
 
 rootdir=$PWD
