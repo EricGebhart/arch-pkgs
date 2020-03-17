@@ -2,7 +2,7 @@ packages := $(shell ls -d */ | sed 's,/,,')
 
 # AUR packages
 X11-apps-aur := yacreader vivaldi vivaldi-codecs-ffmpeg-extra-bin \
-	slack-desktop
+	slack-desktop shortwave
 devel-aur := jekyll babashka-bin
 Anbox := anbox-image-gapps anbox-modules-dkms-git anbox-bridge
 aur-packages :=  $(X11-apps-aur) mu-git $(devel-aur) $(Anbox)
@@ -39,7 +39,7 @@ emacs: necessities natural-language mu-git
 X11: xorg xorg-apps xorg-fonts X11-apps
 X11-apps: yay audio $(X11-apps-aur)
 Xfce: xfce4 xfce-goodies
-audio: alsa
+audio: alsa shortwave
 devel: yay $(devel-aur)
 yay:
 Xmonad:

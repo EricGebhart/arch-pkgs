@@ -10,6 +10,12 @@ groups=(eagebhart)
 
 # audio
 # alsa - is a group. See Makefile.
-depends=(pulseaudio pulseaudio-alsa pulseaudio-bluetooth)
+depends=(pulseaudio pulseaudio-alsa pulseaudio-bluetooth cdparanoia lame)
+# audio players
+depends+=(mpd mpc)
+# audio taggers
+depends+=(picard kid3)
+# video players
+depends+=(mplayer vlc)
 
 rootdir=$PWD
