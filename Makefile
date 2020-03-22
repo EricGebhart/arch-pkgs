@@ -35,7 +35,7 @@ $(groups):
 
 # not necessary to list them, but it's clearer.
 necessities: yay
-emacs: necessities natural-language mu-git
+emacs-pkg-setup: necessities natural-language mu-git
 X11: xorg xorg-apps xorg-fonts X11-apps
 X11-apps: yay audio $(X11-apps-aur)
 Xfce: xfce4 xfce-goodies
