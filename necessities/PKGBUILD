@@ -19,7 +19,7 @@ depends=(sudo git networkmanager tree efibootmgr efivar)
 depends+=(vi neovim nano emacs)
 
 # Extra general packages - nice to have.
-depends+=(bc htop curl wget openssh zip unzip gzip the_silver_searcher)
+depends+=(bc htop curl wget openssh zip unzip gzip p7zip the_silver_searcher)
 
 # fonts, Might as well have some.
 depends+=(ttf-ubuntu-font-family adobe-source-code-pro-fonts)
