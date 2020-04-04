@@ -10,7 +10,8 @@ groups=(eagebhart)
 
 # audio
 # alsa - is a group. See Makefile.
-depends=(pulseaudio pulseaudio-alsa pulseaudio-bluetooth cdparanoia lame)
+depends=(alsa-tools alsa-utils pulseaudio pulseaudio-alsa pulseaudio-bluetooth cdparanoia lame\
+	cdrdao cdrtools pavucontrol)
 # audio players
 depends+=(mpd mpc)
 # audio taggers
