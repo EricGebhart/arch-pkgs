@@ -1,0 +1,19 @@
+# Maintainer: Eric Gebhart <e.a.gebhart@protonmail.com>
+pkgname=games
+pkgver=1
+pkgrel=1
+pkgdesc="Games and game emulators"
+arch=(any)
+url="https://github.com/ericgebhart/arch-pkgs"
+license=(MIT)
+groups=(eagebhart)
+
+install=games.install
+
+### Games
+
+depends+=(pcsx2 retroarch libretro-beetle-psx\
+	 libretro-bsnes-hd libretro-bsnes libretro-play\
+         libretro-snes9x libretro-ppsspp libretro-redream)
+
+rootdir=$PWD
