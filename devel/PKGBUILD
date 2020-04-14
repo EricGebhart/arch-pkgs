@@ -9,6 +9,7 @@ license=(MIT)
 groups=(eagebhart)
 
 #### code
-depends+=(linux-headers leiningen clojure jdk-openjdk perl python ctags openscad ruby ruby-bundler lua guile racket)
+depends+=(linux-headers leiningen clojure npm jdk-openjdk \
+          perl python ctags openscad ruby ruby-bundler lua guile racket)
 
 rootdir=$PWD

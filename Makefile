@@ -6,7 +6,7 @@ X11-apps-aur := yacreader slack-desktop shortwave\
 
 # for some reason touchegg needs xorgproto-git at the moment.
 tablet-apps-aur := xorgproto-git touchegg-qt5 iio-sensor-proxy-git screenrotator-git
-devel-aur := jekyll babashka-bin 
+devel-aur := jekyll babashka-bin qmk boot
 Anbox := anbox-git anbox-modules-dkms-git
 games-aur := pcsxr rpcs3-git libretro-pcsx2
 aur-packages :=  $(X11-apps-aur) mu-git rar $(devel-aur) \
