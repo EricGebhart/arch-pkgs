@@ -9,8 +9,13 @@ tablet-apps-aur := xorgproto-git touchegg-qt5 iio-sensor-proxy-git screenrotator
 devel-aur := jekyll babashka-bin qmk boot
 Anbox := anbox-git anbox-modules-dkms-git
 games-aur := pcsxr rpcs3-git libretro-pcsx2
-aur-packages :=  $(X11-apps-aur) mu-git rar $(devel-aur) \
-	$(Anbox) $(tablet-apps-aur) $(games-aur)
+maker-aur := slic3r-bin kisslicer octoprint-venv octoprint-metadata-preprocessor \
+	mattercontrol printrun repetier-host  # replicatorg
+nec-aur := yay rar rpncalc
+aur-packages :=  $(X11-apps-aur) $(nec-aur) mu-git $(devel-aur) \
+	$(Anbox) $(tablet-apps-aur) $(games-aur) $(maker-aur)
+
+xmonad-aur := polybar
 
 # groups cannot be installed via dependencies in PKGBUILD
 groups := xorg xorg-apps xorg-fonts alsa xfce4 xfce-goodies
@@ -39,16 +44,17 @@ $(groups):
 	sudo pacman -S --noconfirm --needed $@
 
 # not necessary to list them, but it's clearer.
-necessities: yay rar
+necessities: $(nec-aur)
 emacs-pkg-setup: necessities natural-language mu-git
 X11: xorg xorg-apps xorg-fonts X11-apps
 X11-apps: yay audio $(X11-apps-aur)
 Xfce: xfce4 xfce-goodies
-audio: alsa shortwave
+audio: shortwave
 devel: yay $(devel-aur)
+maker: $(maker-aur)
 yay:
 games: $(games-aur)
-Xmonad:
+Xmonad: $(xmonad-aur)
 natural-language:
 mobile-studio-pro:
 tablet: $(tablet-apps-aur)

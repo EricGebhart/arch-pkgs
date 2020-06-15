@@ -33,6 +33,6 @@ depends+=(zsh zsh-completions zsh-autosuggestions zsh-syntax-highlighting \
         zsh-history-substring-search fish)
 
 # Filesystems - probably no need, but ok.
-depends+=(exfat-utils dosfstools f2fs-tools)
+depends+=(exfat-utils dosfstools f2fs-tools cdrtools mkisofs cdrdao)
 
 rootdir=$PWD

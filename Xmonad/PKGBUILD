@@ -1,6 +1,6 @@
 # Maintainer: Eric Gebhart <e.a.gebhart@protonmail.com>
 pkgname=Xmonad-setup
-pkgver=32
+pkgver=1
 pkgrel=1
 pkgdesc="Everything needed by my Xmonad Setup"
 arch=(any)
@@ -9,10 +9,11 @@ license=(MIT)
 groups=(eagebhart)
 
 ### XMonad with accessories and haskell.
-### My Xmonad-setup repo
-### xmonad-log-applet -- my repo
+### This with the Make for the aur stuff, My Xmonad-setup repo and
+### xmonad-log-applet - only for xfce, gnome, kde, mate, --panel -- my repo
 depends=(
     xmonad xmonad-contrib ghc dbus haskell-dbus
-    dmenu dzen2 network-manager-applet xfce4-panel)
+    dmenu dzen2 network-manager-applet xmonad-log
+    conky rofi awesome-terminal-fonts)
 
 rootdir=$PWD
