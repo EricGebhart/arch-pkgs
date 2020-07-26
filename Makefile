@@ -2,7 +2,7 @@ packages := $(shell ls -d */ | sed 's,/,,')
 
 # AUR packages
 X11-apps-aur := yacreader slack-desktop shortwave\
-	vivaldi vivaldi-ffmpeg-codecs \
+	vivaldi vivaldi-ffmpeg-codecs-extra-bin \
 
 # for some reason touchegg needs xorgproto-git at the moment.
 tablet-apps-aur := xorgproto-git touchegg-qt5 iio-sensor-proxy-git screenrotator-git
