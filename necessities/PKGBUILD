@@ -19,7 +19,7 @@ depends=(intel-ucode sudo git networkmanager tree efibootmgr efivar)
 depends+=(vi neovim nano emacs)
 
 # Extra general packages - nice to have.
-depends+=(bc htop curl wget openssh zip unzip gzip p7zip the_silver_searcher)
+depends+=(bc htop curl wget openssh zip unzip unrar gzip p7zip the_silver_searcher)
 
 # fonts, Might as well have some.
 depends+=(ttf-ubuntu-font-family adobe-source-code-pro-fonts)
@@ -28,11 +28,11 @@ depends+=(ttf-ubuntu-font-family adobe-source-code-pro-fonts)
 depends+=(lsof bind-tools mtr socat htop iotop openbsd-netcat)
 depends+=(strace tcpdump whois iftop dstat)
 
-# Shells - Need zsh to create my user account.
+# Shells - zsh and fish are used by closh. Nice zsh completions here.
 depends+=(zsh zsh-completions zsh-autosuggestions zsh-syntax-highlighting \
         zsh-history-substring-search fish)
 
-# Filesystems - probably no need, but ok.
+# Filesystems -
 depends+=(exfat-utils dosfstools f2fs-tools cdrtools mkisofs cdrdao)
 
 rootdir=$PWD

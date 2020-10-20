@@ -7,9 +7,10 @@ arch=(any)
 url="https://github.com/ericgebhart/arch-pkgs"
 license=(MIT)
 groups=(eagebhart)
+install="proto.install"
 
 #### code
-depends+=(linux-headers leiningen clojure npm jdk-openjdk \
-          perl python ctags openscad ruby ruby-bundler lua guile racket)
+depends+=(linux-headers leiningen clojure nodejs npm jdk-openjdk \
+          perl python python-pip ctags openscad ruby ruby-bundler lua guile racket)
 
 rootdir=$PWD

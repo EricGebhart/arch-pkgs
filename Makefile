@@ -8,6 +8,7 @@ X11-apps-aur := yacreader slack-desktop shortwave\
 tablet-apps-aur := xorgproto-git touchegg-qt5 iio-sensor-proxy-git screenrotator-git
 
 devel-aur := jekyll babashka-bin qmk boot
+min-devel-aur := closh
 Anbox := anbox-git anbox-modules-dkms-git
 games-aur := pcsxr rpcs3-git libretro-pcsx2
 
@@ -15,11 +16,13 @@ maker-aur := slic3r-bin kisslicer octoprint-venv octoprint-metadata-preprocessor
 	mattercontrol printrun repetier-host  # replicatorg
 nec-aur := yay rar rpncalc
 
+Iot-aur := particle-cli
+
 xmonad-aur := polybar xmonad-log
 
-aur-packages :=  $(X11-apps-aur) $(nec-aur) mu-git $(devel-aur) \
+aur-packages :=  $(X11-apps-aur) $(nec-aur) mu-git $(devel-aur) $(min-devel)\
 	$(Anbox) $(tablet-apps-aur) $(games-aur) $(maker-aur) \
-        $(xmonad-aur)
+        $(xmonad-aur) $(Iot-aur)
 
 
 # groups cannot be installed via dependencies in PKGBUILD
@@ -50,13 +53,13 @@ $(groups):
 	sudo pacman -S --noconfirm --needed $@
 
 # not necessary to list them, but it's clearer.
-necessities: $(nec-aur)
+necessities: $(nec-aur) yay
 emacs-pkg-setup: necessities natural-language mu-git
 X11: xorg xorg-apps xorg-fonts X11-apps
-X11-apps: yay audio $(X11-apps-aur)
+X11-apps: audio $(X11-apps-aur)
 Xfce: xfce4 xfce-goodies
 audio: shortwave
-devel: yay $(devel-aur)
+devel: $(devel-aur) $(min-devel-aur)
 maker: devel $(maker-aur)
 yay:
 games: $(games-aur)
@@ -66,7 +69,9 @@ mobile-studio-pro:
 tablet: $(tablet-apps-aur)
 anbox: $(Anbox)
 
-base: necessities X11 audio Xmonad
+Iot: $(Iot-aur) minduino $(min-devel-aur) necessities
+
+baseX11: necessities X11 audio Xmonad
 
 git-sub-update:
 	git submodule update --recursive --remote

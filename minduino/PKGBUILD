@@ -1,14 +1,16 @@
 # Maintainer: Eric Gebhart <e.a.gebhart@protonmail.com>
-pkgname=emacs-pkg-setup
+pkgname=minduino
 pkgver=1
 pkgrel=1
-pkgdesc="emacs stuff"
+pkgdesc="Minimal stuff for flashing"
 arch=(any)
 url="https://github.com/ericgebhart/arch-pkgs"
 license=(MIT)
 groups=(eagebhart)
+install="proto.install"
 
-# emacs
-depends=(emacs notmuch isync ctags)
+#### code
+depends+=(linux-headers dfu-util avrdude nodejs npm  \
+          python python-pip)
 
 rootdir=$PWD

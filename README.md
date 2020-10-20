@@ -22,20 +22,22 @@ clone that with recurse submodules, you will get a higher level Makefile with ad
 for configuration and setup.
 
 ## the packages.
+ * necessities - lots of cli stuff.
  * yay - An installer for the AUR.
  * X11 - Xorg, xorg-apps etc.
  * X11-apps - libreoffice, vivaldi, audacity, dolphin, network-manager-applet, etc.
  * Xmonad - xmonad, xmonad-contrib, ghci, polybar, dmenu, dzen2, rofi, conky, etc.
  * Xfce4 and xfce4-goodies - Xfce
  * emacs - emacs, isync, mu4e, languagetool hunspell
- * devel - clojure, python, openSCAD, etc.
+ * devel - clojure, python, lua, guile, etc.
  * natural-language - languagetool, anki, hunspell
  * mobile-studio-pro - necessities for an MSP, nvidia...
  * tablet - various apps like krita, blender, gimp, cellwriter, easystroke, onboard, Xournalpp, etc.
  * natural-language - languagetool, anki, hunspell dictionaries, etc.
  * maker - arduino, qmk, ARM tools, kicad, openSCAD, repetier-host, circuits and 3D printing stuff.
-
-
+ * games - Ps1,2,3 ninetindo,  sega,etc.
+ * minduino - particle-cli, python, npm, node.js,
+ * anbox - android in a box.
 
 # See Also:
 
