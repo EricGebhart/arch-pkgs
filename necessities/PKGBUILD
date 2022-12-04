@@ -22,7 +22,7 @@ depends+=(vi neovim nano emacs)
 depends+=(bc htop curl wget openssh zip unzip unrar gzip p7zip the_silver_searcher)
 
 # fonts, Might as well have some.
-depends+=(ttf-ubuntu-font-family adobe-source-code-pro-fonts)
+depends+=(ttf-ubuntu-font-family adobe-source-code-pro-fonts ttf-iosevka)
 
 # Debugging tools ok. why not.
 depends+=(lsof bind-tools mtr socat htop iotop openbsd-netcat)
@@ -33,6 +33,6 @@ depends+=(zsh zsh-completions zsh-autosuggestions zsh-syntax-highlighting \
         zsh-history-substring-search fish)
 
 # Filesystems -
-depends+=(exfat-utils dosfstools f2fs-tools cdrtools mkisofs cdrdao)
+depends+=(exfat-utils dosfstools f2fs-tools cdrtools cdrdao)
 
 rootdir=$PWD

@@ -1,8 +1,8 @@
 packages := $(shell ls -d */ | sed 's,/,,')
 
 # AUR packages
-X11-apps-aur := yacreader slack-desktop shortwave\
-	vivaldi vivaldi-codecs-ffmpeg-extra-bin \
+X11-apps-aur := yacreader slack-desktop shortwave
+
 
 # for some reason touchegg needs xorgproto-git at the moment.
 tablet-apps-aur := xorgproto-git touchegg-qt5 iio-sensor-proxy-git screenrotator-git
@@ -14,11 +14,11 @@ games-aur := pcsxr rpcs3-git libretro-pcsx2
 
 maker-aur := slic3r-bin kisslicer octoprint-venv octoprint-metadata-preprocessor \
 	mattercontrol printrun repetier-host  # replicatorg
-nec-aur := yay rar rpncalc
+nec-aur := yay rar
 
 Iot-aur := particle-cli
 
-xmonad-aur := polybar xmonad-log
+xmonad-aur := polybar xmonad-log nerd-fonts-complete
 
 aur-packages :=  $(X11-apps-aur) $(nec-aur) mu-git $(devel-aur) $(min-devel)\
 	$(Anbox) $(tablet-apps-aur) $(games-aur) $(maker-aur) \
@@ -55,7 +55,7 @@ $(groups):
 # not necessary to list them, but it's clearer.
 necessities: $(nec-aur) yay
 emacs-pkg-setup: necessities natural-language mu-git
-X11: xorg xorg-apps xorg-fonts X11-apps
+X11: xorg xorg-apps xorg-fonts
 X11-apps: audio $(X11-apps-aur)
 Xfce: xfce4 xfce-goodies
 audio: shortwave
