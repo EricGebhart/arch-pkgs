@@ -22,7 +22,8 @@ depends+=(vi neovim nano emacs)
 depends+=(bc htop curl wget openssh zip unzip unrar gzip p7zip the_silver_searcher)
 
 # fonts, Might as well have some.
-depends+=(ttf-ubuntu-font-family adobe-source-code-pro-fonts ttf-iosevka)
+depends+=(ttf-ubuntu-font-family awesome-terminal-fonts \
+          adobe-source-code-pro-fonts ttf-iosevka)
 
 # Debugging tools ok. why not.
 depends+=(lsof bind-tools mtr socat htop iotop openbsd-netcat)
