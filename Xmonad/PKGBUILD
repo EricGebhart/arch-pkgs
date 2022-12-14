@@ -13,7 +13,7 @@ groups=(eagebhart)
 ### xmonad-log-applet - only for xfce, gnome, kde, mate, --panel -- my repo
 depends=(
     xmonad xmonad-contrib ghc dbus haskell-dbus
-    dmenu dzen2 network-manager-applet 
-    conky rofi awesome-terminal-fonts)
+    dmenu dzen2 network-manager-applet
+    conky rofi)
 
 rootdir=$PWD

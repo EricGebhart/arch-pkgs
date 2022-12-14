@@ -9,6 +9,6 @@ license=(MIT)
 groups=(eagebhart)
 
 ##### languages
-depends=(anki languagetool hunspell hunspell-fr hunspell-en_US hunspell-es_any )
+depends=(languagetool hunspell hunspell-fr hunspell-en_US hunspell-es_any )
 
 rootdir=$PWD

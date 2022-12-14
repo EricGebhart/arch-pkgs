@@ -10,7 +10,7 @@ groups=(eagebhart)
 
 #### Basic Apps.
 depends=(libreoffice-fresh dolphin network-manager-applet audacity
-lxappearance)
+         lxappearance vivaldi vivaldi-ffmpeg-codecs)
 
 depends+=(xscreensaver xcompmgr polkit polkit-gnome polkit-qt5)
 
